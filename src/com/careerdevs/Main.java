@@ -9,19 +9,24 @@ public class Main {
         System.out.println(getNextNum(6));
 
         System.out.println(search(new int[] {2,3,7},3));
+
+        System.out.println(convert(12));
     }
+
 
     public static int getFirstIndexValue(int[] arr) {
 
         return arr[0];
     }
 
+
     public static int getNextNum(int num) {
 
         return ++num;
     }
 
-    public static int search(int arr[], int item){
+
+    public static int search(int[] arr, int item){
 
         for (int i = 0; i < arr.length; i++) {
 
@@ -32,5 +37,12 @@ public class Main {
         }
 
         return -1;
+    }
+
+
+    public static int convert(int minutes){
+
+         return minutes * 60;
+
     }
 }
