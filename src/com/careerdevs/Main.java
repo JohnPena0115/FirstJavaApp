@@ -131,7 +131,7 @@ public class Main {
      This line was the bane of my existence for half an hour: index = str.charAt(i);
      I had originally written it as index = str.charAt[i]; and couldn't figure out what was
      wrong with my program. It was only when I copy-pasted my code from edabit to Intellij that
-     I was able to stop the error
+     I was able to spot the error
 
      Cannot find symbol was the relevant message for this error
 
