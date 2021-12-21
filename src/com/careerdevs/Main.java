@@ -11,6 +11,8 @@ public class Main {
         System.out.println(search(new int[] {2,3,7},3));
 
         System.out.println(convert(12));
+
+        System.out.println(countWords("We wish you a Merry Christmas and a Happy New Year"));
     }
 
 
@@ -45,4 +47,34 @@ public class Main {
          return minutes * 60;
 
     }
+
+
+    public static int countWords(String s) {
+        int words = 1;
+        for (int i = 0; i < s.length(); i++){
+
+            if (s.charAt(i) == ' '){
+
+                words++;
+
+            }
+        }
+
+        return words;
+    }
+
+    /*
+     Another ways of tackling the problem:
+
+      int count = 1;
+      for(int i = 0; i < s.length(); i++)
+        if(Character.isWhitespace(s.charAt(i)))
+          count++;
+      return count;
+
+      public static int countWords(String s) {
+      return s.split(" ").length;
+    }
+
+   */
 }
