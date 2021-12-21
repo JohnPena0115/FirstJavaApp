@@ -19,6 +19,8 @@ public class Main {
         System.out.println(reverse(true));
 
         System.out.println(existsHigher(new int[] {5, 3, 15, 22, 4}, 10));
+
+        System.out.println(getCount("Mississippi Massachusetts Missouri Main"));
     }
 
 
@@ -103,4 +105,72 @@ public class Main {
 
         return false;
     }
+
+
+    public static int getCount(String str) {
+        int vowelsCount = 0;
+        char index;
+
+        // Your code here
+
+        for (int i = 0; i < str.length(); i++){
+
+            index = str.charAt(i);
+
+            if (index == 'a' || index == 'e' || index == 'i' || index == 'o'
+                    || index =='u') {
+
+                vowelsCount++;
+            }
+        }
+
+        return vowelsCount;
+    }
+
+    /*
+     This line was the bane of my existence for half an hour: index = str.charAt(i);
+     I had originally written it as index = str.charAt[i]; and couldn't figure out what was
+     wrong with my program. It was only when I copy-pasted my code from edabit to Intellij that
+     I was able to stop the error
+
+     Cannot find symbol was the relevant message for this error
+
+     I then tried to rewrite the code with a switch statement. Unfortunately I deleted a closing
+     curly brace in the process and edabit's "Reached end of file while parsing" whispered sweet
+     nothings in my ear.
+
+     public static int getCount(String str) {
+    int vowelsCount = 0;
+		char index;
+
+    // Your code here
+
+	for (int i = 0; i < str.length(); i++){
+
+		index = str.charAt(i);
+
+		switch(index) {
+
+			case 'a':
+			case 'e':
+			case 'i':
+			case 'o':
+			case 'u':
+			case 'A':
+			case 'E':
+			case 'I':
+			case 'O':
+			case 'U':
+				vowelsCount++;
+				break;
+
+		 }
+	 }
+		return vowelsCount;
+  }
 }
+     */
+
+
+  }
+
