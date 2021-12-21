@@ -1,8 +1,6 @@
 package com.careerdevs;
 
-import java.sql.SQLOutput;
-
-public class Main {
+ public class Main {
 
     public static void main(String[] args) {
 
@@ -20,7 +18,9 @@ public class Main {
 
         System.out.println(existsHigher(new int[] {5, 3, 15, 22, 4}, 10));
 
-        System.out.println(getCount("Mississippi Massachusetts Missouri Main"));
+        System.out.println(getCount("Mississippi Massachusetts Missouri Maine"));
+
+        System.out.println(giveMeSomething("is amiss"));
     }
 
 
@@ -136,7 +136,7 @@ public class Main {
      Cannot find symbol was the relevant message for this error
 
      I then tried to rewrite the code with a switch statement. Unfortunately I deleted a closing
-     curly brace in the process and edabit's "Reached end of file while parsing" whispered sweet
+     curly brace in the process and Edabit's "Reached end of file while parsing" whispered sweet
      nothings in my ear.
 
      public static int getCount(String str) {
@@ -224,6 +224,17 @@ public class Main {
 
     */
 
+    public static String giveMeSomething(String input) {
+
+         return "something " + input;
+
+    }
+
+    /*
+
+    Surprisingly, this gave me problems because I had written "string input" on as opposed
+    to "String input". Still getting use to Java.
+    */
+
 
   }
-
