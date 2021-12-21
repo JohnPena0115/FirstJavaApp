@@ -17,6 +17,8 @@ public class Main {
         System.out.println(countWords("We wish you a Merry Christmas and a Happy New Year"));
 
         System.out.println(reverse(true));
+
+        System.out.println(existsHigher(new int[] {5, 3, 15, 22, 4}, 10));
     }
 
 
@@ -89,4 +91,16 @@ public class Main {
     }
 
 
+    public static boolean existsHigher(int[] arr, int n) {
+
+        for (int i = 0; i < arr.length; i++) {
+
+            if (arr[i] >= n) {
+
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
