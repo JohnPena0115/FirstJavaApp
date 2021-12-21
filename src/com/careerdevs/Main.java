@@ -1,5 +1,7 @@
 package com.careerdevs;
 
+import java.sql.SQLOutput;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -13,6 +15,8 @@ public class Main {
         System.out.println(convert(12));
 
         System.out.println(countWords("We wish you a Merry Christmas and a Happy New Year"));
+
+        System.out.println(reverse(true));
     }
 
 
@@ -77,4 +81,12 @@ public class Main {
     }
 
    */
+
+    public static boolean reverse(boolean b) {
+
+        return !b;
+
+    }
+
+
 }
