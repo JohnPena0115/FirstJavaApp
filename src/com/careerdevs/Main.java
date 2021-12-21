@@ -171,6 +171,59 @@ public class Main {
 }
      */
 
+    /*
+
+    Revision 1 =>
+
+    Rewrote the switch statement to account for the frequency of appearance for English
+    vowels:
+
+    switch(index) {
+
+			case 'e':
+			    vowelsCount++;
+				break;
+
+			case 'a':
+			    vowelsCount++;
+				break;
+
+			case 'i':
+			    vowelsCount++;
+				break;
+
+			case 'o':
+			    vowelsCount++;
+				break;
+
+			case 'u':
+			    vowelsCount++;
+				break;
+
+			case 'E':
+			    vowelsCount++;
+				break;
+
+			case 'A':
+			    vowelsCount++;
+				break;
+
+			case 'I':
+			    vowelsCount++;
+				break;
+
+			case 'O':
+			    vowelsCount++;
+				break;
+
+			case 'U':
+				vowelsCount++;
+				break;
+
+		 }
+
+    */
+
 
   }
 
