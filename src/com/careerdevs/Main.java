@@ -27,6 +27,8 @@ package com.careerdevs;
         System.out.println("01:22".split(":")[0]);
 
         System.out.println(minutesToSeconds("07:59"));
+
+        System.out.println(differenceMaxMin(new int[] {12, 15, -1, 7, 99}));
     }
 
 
@@ -268,7 +270,7 @@ package com.careerdevs;
          }
 
 
-     public static int minutesToSeconds(String tm) {
+        public static int minutesToSeconds(String tm) {
 
 
          int minutes = Integer.valueOf(tm.split(":")[0]);
@@ -281,7 +283,33 @@ package com.careerdevs;
 
          return minutes*60 + seconds;
 
-     }
+        }
+
+        public static int differenceMaxMin(int[] arr) {
+
+         int max = arr[0];
+         int min = arr[0];
+
+         for (int i = 1; i < arr.length; i++){
+
+             if (arr[i] > max) {
+
+                 max = arr[i];
+             }
+
+             if (arr[i] < min ) {
+
+                 min = arr[i];
+             }
+
+
+         }
+
+         return max - min;
+
+        }
+
+
      }
 
 
