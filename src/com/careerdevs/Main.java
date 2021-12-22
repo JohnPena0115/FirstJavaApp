@@ -23,6 +23,10 @@ package com.careerdevs;
         System.out.println(giveMeSomething("is amiss"));
 
         System.out.println(rev(-512));
+
+        System.out.println("01:22".split(":")[0]);
+
+        System.out.println(minutesToSeconds("07:59"));
     }
 
 
@@ -262,6 +266,22 @@ package com.careerdevs;
              return reversedNumber;
 
          }
+
+
+     public static int minutesToSeconds(String tm) {
+
+
+         int minutes = Integer.valueOf(tm.split(":")[0]);
+         int seconds = Integer.valueOf(tm.split(":")[1]);
+
+         if (seconds >= 60){
+
+             return -1;
+         }
+
+         return minutes*60 + seconds;
+
+     }
      }
 
 
