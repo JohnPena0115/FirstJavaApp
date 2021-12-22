@@ -21,6 +21,8 @@ package com.careerdevs;
         System.out.println(getCount("Mississippi Massachusetts Missouri Maine"));
 
         System.out.println(giveMeSomething("is amiss"));
+
+        System.out.println(rev(-512));
     }
 
 
@@ -237,4 +239,30 @@ package com.careerdevs;
     */
 
 
-  }
+         public static String rev(int n) {
+             String reversedNumber = "";
+
+             if (n < 0){
+
+                 n = n * - 1;
+             }
+
+             while (n/10 > 0) {
+
+                 reversedNumber += String.valueOf(n % 10);
+
+                 n /= 10;
+             }
+
+             if (n < 10 ){
+
+                 reversedNumber += String.valueOf(n);
+             }
+
+             return reversedNumber;
+
+         }
+     }
+
+
+
