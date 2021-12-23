@@ -29,6 +29,14 @@ package com.careerdevs;
         System.out.println(minutesToSeconds("07:59"));
 
         System.out.println(differenceMaxMin(new int[] {12, 15, -1, 7, 99}));
+
+        System.out.println(doubleLetters("All"));
+
+        System.out.println(doubleLetters("Lagoon"));
+
+        System.out.println(doubleLetters("Aardvark"));
+
+        System.out.println(doubleLetters("Enter"));
     }
 
 
@@ -310,7 +318,41 @@ package com.careerdevs;
         }
 
 
+          public static boolean doubleLetters(String word) {
+
+             String lowercaseArg = word.toLowerCase();
+
+             boolean doubleLetters = false;
+
+             int previousIndex = 0;
+             int currentIndex = 1;
+
+             char previousChar = ' ';
+             char currentChar = ' ';
+
+
+             while (currentIndex < word.length()) {
+
+                 previousChar = lowercaseArg.charAt(previousIndex);
+                 currentChar = lowercaseArg.charAt(currentIndex);
+
+                 if (previousChar == currentChar){
+
+                     doubleLetters = true;
+                     break;
+                 }
+
+                 previousIndex++;
+                 currentIndex++;
+             }
+
+             return doubleLetters;
+
+         }
      }
+
+
+
 
 
 
