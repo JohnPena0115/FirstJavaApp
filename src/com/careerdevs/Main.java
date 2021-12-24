@@ -1,6 +1,6 @@
 package com.careerdevs;
 
- public class Main {
+public class Main {
 
     public static void main(String[] args) {
 
@@ -37,6 +37,18 @@ package com.careerdevs;
         System.out.println(doubleLetters("Aardvark"));
 
         System.out.println(doubleLetters("Enter"));
+
+        System.out.println(sum(7, -9));
+
+        System.out.println(isSameNum(7, -7));
+
+        System.out.println(calcAge(27));
+
+        System.out.println(helloName("Aes Sedai"));
+
+        System.out.println(reverse("Desserts"));
+        System.out.println(reverse("Flow"));
+        System.out.println(reverse("Tort"));
     }
 
 
@@ -318,7 +330,7 @@ package com.careerdevs;
         }
 
 
-          public static boolean doubleLetters(String word) {
+        public static boolean doubleLetters(String word) {
 
              String lowercaseArg = word.toLowerCase();
 
@@ -349,7 +361,97 @@ package com.careerdevs;
              return doubleLetters;
 
          }
+
+     public static int sum(int a, int b) {
+
+         return a + b;
+
      }
+
+     public static boolean isSameNum(int x, int y) {
+
+         if ( x == y ) {
+
+             return true;
+
+         } else {
+
+             return false;
+
+         }
+     }
+
+     public static int calcAge(int age) {
+
+		/*
+		Use 365 days as the length of a year for this challenge.
+        Ignore leap years and days between last birthday and now.
+        Expect only positive integer inputs.
+		*/
+
+         return age*365 ;
+
+     }
+
+     public static String helloName(String name) {
+
+		/*
+
+		Create a function that takes a name and returns a greeting in
+		the form of a string.
+
+		helloName("Gerald") ➞ "Hello Gerald!"
+
+		helloName("Tiffany") ➞ "Hello Tiffany!"
+
+		helloName("Ed") ➞ "Hello Ed!"
+
+		*/
+
+         String output = "Hello " + name + "!";
+
+         return output;
+
+
+     }
+
+     public static String reverse(String str) {
+
+
+         String reversed = new StringBuffer(str).reverse().toString();
+
+         return reversed;
+
+
+
+         /*
+         String reversed = "";
+
+         for (int i = str.length() - 1; i <= 0; i++){
+
+             if ( i == str.length() - 1){
+
+                 reversed += str.charAt(i);
+                 reversed.toUpperCase();
+
+             }else if (i == 0){
+
+                 char lowercase = str.charAt(i);
+                 lowercase = Character.toLowerCase(lowercase);
+                 reversed +=  lowercase;
+
+             }else {
+
+                 reversed += str.charAt(i);
+
+             }
+         }
+
+         return reversed;
+        */
+     }
+
+ }
 
 
 
