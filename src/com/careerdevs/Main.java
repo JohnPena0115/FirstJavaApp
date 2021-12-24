@@ -4,11 +4,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println(getFirstIndexValue(new int[] {3,1, 4}));
+        System.out.println(getFirstIndexValue(new int[]{3, 1, 4}));
 
         System.out.println(getNextNum(6));
 
-        System.out.println(search(new int[] {2,3,7},3));
+        System.out.println(search(new int[]{2, 3, 7}, 3));
 
         System.out.println(convert(12));
 
@@ -16,7 +16,7 @@ public class Main {
 
         System.out.println(reverse(true));
 
-        System.out.println(existsHigher(new int[] {5, 3, 15, 22, 4}, 10));
+        System.out.println(existsHigher(new int[]{5, 3, 15, 22, 4}, 10));
 
         System.out.println(getCount("Mississippi Massachusetts Missouri Maine"));
 
@@ -28,7 +28,7 @@ public class Main {
 
         System.out.println(minutesToSeconds("07:59"));
 
-        System.out.println(differenceMaxMin(new int[] {12, 15, -1, 7, 99}));
+        System.out.println(differenceMaxMin(new int[]{12, 15, -1, 7, 99}));
 
         System.out.println(doubleLetters("All"));
 
@@ -64,7 +64,7 @@ public class Main {
     }
 
 
-    public static int search(int[] arr, int item){
+    public static int search(int[] arr, int item) {
 
         for (int i = 0; i < arr.length; i++) {
 
@@ -78,18 +78,18 @@ public class Main {
     }
 
 
-    public static int convert(int minutes){
+    public static int convert(int minutes) {
 
-         return minutes * 60;
+        return minutes * 60;
 
     }
 
 
     public static int countWords(String s) {
         int words = 1;
-        for (int i = 0; i < s.length(); i++){
+        for (int i = 0; i < s.length(); i++) {
 
-            if (s.charAt(i) == ' '){
+            if (s.charAt(i) == ' ') {
 
                 words++;
 
@@ -141,12 +141,12 @@ public class Main {
 
         // Your code here
 
-        for (int i = 0; i < str.length(); i++){
+        for (int i = 0; i < str.length(); i++) {
 
             index = str.charAt(i);
 
             if (index == 'a' || index == 'e' || index == 'i' || index == 'o'
-                    || index =='u') {
+                    || index == 'u') {
 
                 vowelsCount++;
             }
@@ -254,7 +254,7 @@ public class Main {
 
     public static String giveMeSomething(String input) {
 
-         return "something " + input;
+        return "something " + input;
 
     }
 
@@ -265,123 +265,123 @@ public class Main {
     */
 
 
-         public static String rev(int n) {
-             String reversedNumber = "";
+    public static String rev(int n) {
+        String reversedNumber = "";
 
-             if (n < 0){
+        if (n < 0) {
 
-                 n = n * - 1;
-             }
+            n = n * -1;
+        }
 
-             while (n/10 > 0) {
+        while (n / 10 > 0) {
 
-                 reversedNumber += String.valueOf(n % 10);
+            reversedNumber += String.valueOf(n % 10);
 
-                 n /= 10;
-             }
+            n /= 10;
+        }
 
-             if (n < 10 ){
+        if (n < 10) {
 
-                 reversedNumber += String.valueOf(n);
-             }
+            reversedNumber += String.valueOf(n);
+        }
 
-             return reversedNumber;
+        return reversedNumber;
 
-         }
-
-
-        public static int minutesToSeconds(String tm) {
+    }
 
 
-         int minutes = Integer.valueOf(tm.split(":")[0]);
-         int seconds = Integer.valueOf(tm.split(":")[1]);
+    public static int minutesToSeconds(String tm) {
 
-         if (seconds >= 60){
 
-             return -1;
-         }
+        int minutes = Integer.valueOf(tm.split(":")[0]);
+        int seconds = Integer.valueOf(tm.split(":")[1]);
 
-         return minutes*60 + seconds;
+        if (seconds >= 60) {
+
+            return -1;
+        }
+
+        return minutes * 60 + seconds;
+
+    }
+
+    public static int differenceMaxMin(int[] arr) {
+
+        int max = arr[0];
+        int min = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+
+            if (arr[i] > max) {
+
+                max = arr[i];
+            }
+
+            if (arr[i] < min) {
+
+                min = arr[i];
+            }
+
 
         }
 
-        public static int differenceMaxMin(int[] arr) {
+        return max - min;
 
-         int max = arr[0];
-         int min = arr[0];
-
-         for (int i = 1; i < arr.length; i++){
-
-             if (arr[i] > max) {
-
-                 max = arr[i];
-             }
-
-             if (arr[i] < min ) {
-
-                 min = arr[i];
-             }
+    }
 
 
-         }
+    public static boolean doubleLetters(String word) {
 
-         return max - min;
+        String lowercaseArg = word.toLowerCase();
 
+        boolean doubleLetters = false;
+
+        int previousIndex = 0;
+        int currentIndex = 1;
+
+        char previousChar = ' ';
+        char currentChar = ' ';
+
+
+        while (currentIndex < word.length()) {
+
+            previousChar = lowercaseArg.charAt(previousIndex);
+            currentChar = lowercaseArg.charAt(currentIndex);
+
+            if (previousChar == currentChar) {
+
+                doubleLetters = true;
+                break;
+            }
+
+            previousIndex++;
+            currentIndex++;
         }
 
+        return doubleLetters;
 
-        public static boolean doubleLetters(String word) {
+    }
 
-             String lowercaseArg = word.toLowerCase();
+    public static int sum(int a, int b) {
 
-             boolean doubleLetters = false;
+        return a + b;
 
-             int previousIndex = 0;
-             int currentIndex = 1;
+    }
 
-             char previousChar = ' ';
-             char currentChar = ' ';
+    public static boolean isSameNum(int x, int y) {
 
+        if (x == y) {
 
-             while (currentIndex < word.length()) {
+            return true;
 
-                 previousChar = lowercaseArg.charAt(previousIndex);
-                 currentChar = lowercaseArg.charAt(currentIndex);
+        } else {
 
-                 if (previousChar == currentChar){
+            return false;
 
-                     doubleLetters = true;
-                     break;
-                 }
+        }
+    }
 
-                 previousIndex++;
-                 currentIndex++;
-             }
-
-             return doubleLetters;
-
-         }
-
-     public static int sum(int a, int b) {
-
-         return a + b;
-
-     }
-
-     public static boolean isSameNum(int x, int y) {
-
-         if ( x == y ) {
-
-             return true;
-
-         } else {
-
-             return false;
-
-         }
-     }
-
-     public static int calcAge(int age) {
+    public static int calcAge(int age) {
 
 		/*
 		Use 365 days as the length of a year for this challenge.
@@ -389,11 +389,11 @@ public class Main {
         Expect only positive integer inputs.
 		*/
 
-         return age*365 ;
+        return age * 365;
 
-     }
+    }
 
-     public static String helloName(String name) {
+    public static String helloName(String name) {
 
 		/*
 
@@ -408,50 +408,53 @@ public class Main {
 
 		*/
 
-         String output = "Hello " + name + "!";
+        String output = "Hello " + name + "!";
 
-         return output;
-
-
-     }
-
-     public static String reverse(String str) {
+        return output;
 
 
+    }
+
+    public static String reverse(String str) {
+
+        /*
          String reversed = new StringBuffer(str).reverse().toString();
 
          return reversed;
 
+         */
 
 
-         /*
-         String reversed = "";
+        String reversed = "";
+        char letter;
 
-         for (int i = str.length() - 1; i <= 0; i++){
 
-             if ( i == str.length() - 1){
+        for (int i = str.length() - 1; i >= 0; i--) {
 
-                 reversed += str.charAt(i);
-                 reversed.toUpperCase();
+            if (i == str.length() - 1) {
 
-             }else if (i == 0){
+                letter = Character.toUpperCase(str.charAt(i));
+                reversed += letter;
 
-                 char lowercase = str.charAt(i);
-                 lowercase = Character.toLowerCase(lowercase);
-                 reversed +=  lowercase;
 
-             }else {
+            } else if (i != 0) {
 
-                 reversed += str.charAt(i);
+                reversed += str.charAt(i);
 
-             }
-         }
 
-         return reversed;
-        */
-     }
+            } else {
 
- }
+                letter = Character.toLowerCase(str.charAt(i));
+                reversed += letter;
+
+            }
+        }
+
+        return reversed;
+
+    }
+
+}
 
 
 
