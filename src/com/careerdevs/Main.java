@@ -3,24 +3,34 @@ package com.careerdevs;
 public class Main {
 
     public static void main(String[] args) {
-
+        //1.1
         System.out.println(getFirstIndexValue(new int[]{3, 1, 4}));
 
+        //1.2
         System.out.println(getNextNum(6));
 
+        //1.3
         System.out.println(search(new int[]{2, 3, 7}, 3));
 
+        //1.4
         System.out.println(convert(12));
 
-        System.out.println(countWords("We wish you a Merry Christmas and a Happy New Year"));
+        //1.5
+        System.out.println(giveMeSomething("is amiss"));
 
+
+        //2.1
         System.out.println(reverse(true));
 
+        //2.2
+        System.out.println(countWords("We wish you a Merry Christmas and a Happy New Year"));
+
+
+        //2.3
         System.out.println(existsHigher(new int[]{5, 3, 15, 22, 4}, 10));
 
-        System.out.println(getCount("Mississippi Massachusetts Missouri Maine"));
-
-        System.out.println(giveMeSomething("is amiss"));
+        //2.4
+        System.out.println(getVowelCount("Mississippi Massachusetts Missouri Maine"));
 
         System.out.println(rev(-512));
 
@@ -38,32 +48,50 @@ public class Main {
 
         System.out.println(doubleLetters("Enter"));
 
+        //3.1
         System.out.println(sum(7, -9));
 
-        System.out.println(isSameNum(7, -7));
+        //3.2
+        System.out.println(isNumSame(7, -7));
 
+        //3.3
         System.out.println(calcAge(27));
 
+        //3.4
         System.out.println(helloName("Aes Sedai"));
 
+        //3.5
         System.out.println(reverse("Desserts"));
         System.out.println(reverse("Flow"));
         System.out.println(reverse("Tort"));
+
+        //4.1
+        System.out.println(makesTen(-11, 21));
+
+        //4.2
+        System.out.println(numberSyllables("wop-ba-ba-lu-mop-a-wap-bam-boom"));
+
+        //4.3
+        System.out.println(match("head", "heal"));
+        System.out.println(match("apple", "Apple"));
+
+        //4.4
+        System.out.println(hackerSpeak("Whatcha takin' bout Willis!"));
     }
 
-
+    // 1.1
     public static int getFirstIndexValue(int[] arr) {
 
         return arr[0];
     }
 
-
+    // 1.2
     public static int getNextNum(int num) {
 
         return ++num;
     }
 
-
+    // 1.3
     public static int search(int[] arr, int item) {
 
         for (int i = 0; i < arr.length; i++) {
@@ -78,13 +106,35 @@ public class Main {
     }
 
 
+    // 1.4
     public static int convert(int minutes) {
 
         return minutes * 60;
 
     }
 
+    // 1.5
+    public static String giveMeSomething(String input) {
 
+        return "something " + input;
+
+    }
+
+    /*
+
+    Surprisingly, this gave me problems because I had written "string input" on as opposed
+    to "String input". Still getting use to Java.
+    */
+
+    // 2.1
+    public static boolean reverse(boolean b) {
+
+        return !b;
+
+    }
+
+
+    // 2.2
     public static int countWords(String s) {
         int words = 1;
         for (int i = 0; i < s.length(); i++) {
@@ -98,6 +148,7 @@ public class Main {
 
         return words;
     }
+
 
     /*
      Another ways of tackling the problem:
@@ -114,13 +165,7 @@ public class Main {
 
    */
 
-    public static boolean reverse(boolean b) {
-
-        return !b;
-
-    }
-
-
+    // 2.3
     public static boolean existsHigher(int[] arr, int n) {
 
         for (int i = 0; i < arr.length; i++) {
@@ -134,8 +179,8 @@ public class Main {
         return false;
     }
 
-
-    public static int getCount(String str) {
+    // 2.4
+    public static int getVowelCount(String str) {
         int vowelsCount = 0;
         char index;
 
@@ -252,18 +297,6 @@ public class Main {
 
     */
 
-    public static String giveMeSomething(String input) {
-
-        return "something " + input;
-
-    }
-
-    /*
-
-    Surprisingly, this gave me problems because I had written "string input" on as opposed
-    to "String input". Still getting use to Java.
-    */
-
 
     public static String rev(int n) {
         String reversedNumber = "";
@@ -362,13 +395,15 @@ public class Main {
 
     }
 
+    // 3.1
     public static int sum(int a, int b) {
 
         return a + b;
 
     }
 
-    public static boolean isSameNum(int x, int y) {
+    // 3.2
+    public static boolean isNumSame(int x, int y) {
 
         if (x == y) {
 
@@ -381,6 +416,7 @@ public class Main {
         }
     }
 
+    // 3.3
     public static int calcAge(int age) {
 
 		/*
@@ -393,6 +429,7 @@ public class Main {
 
     }
 
+    // 3.4
     public static String helloName(String name) {
 
 		/*
@@ -415,6 +452,7 @@ public class Main {
 
     }
 
+    //3.5
     public static String reverse(String str) {
 
         /*
@@ -453,6 +491,88 @@ public class Main {
         return reversed;
 
     }
+
+
+    //4.1
+    public static boolean makesTen(int a, int b) {
+
+        return a == 10 || b == 10 || a + b == 10 ? true : false;
+
+    }
+
+    //4.2
+    public static int numberSyllables(String word) {
+
+        int syllables = 1;
+
+        if (word.length() == 0)
+            return 0;
+
+        for (int i = 0; i < word.length(); i++){
+
+            if (word.charAt(i) == '-')
+                syllables++;
+        }
+        return syllables;
+    }
+
+
+    //4.3
+    public static boolean match(String str1, String str2) {
+        boolean match = true;
+
+        String one = str1.trim().toLowerCase();
+        String two = str2.trim().toLowerCase();
+
+        if (one.length() != two.length()) return false;
+
+        for (int i = 0; i < one.length(); i++) {
+
+            if ( one.charAt(i) != two.charAt(i) ){
+
+                match = false;
+                break;
+            }
+        }
+        return match;
+    }
+
+    //4.4
+    public static String hackerSpeak(String str) {
+        String output = "";
+
+        for (int i = 0; i < str.length(); i++){
+
+            switch ( str.charAt(i) ) {
+
+                case 'e':
+                    output += '3';
+                    break;
+
+                case 'a':
+                    output += '4';
+                    break;
+
+                case 'i':
+                    output += '1';
+                    break;
+
+                case 'o':
+                    output += '0';
+                    break;
+
+                case 's':
+                    output += '5';
+                    break;
+
+                default:
+                    output += str.charAt(i);
+            }
+
+        }
+        return output;
+    }
+
 
 }
 
