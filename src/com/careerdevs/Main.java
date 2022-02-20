@@ -3,6 +3,7 @@ package com.careerdevs;
 public class Main {
 
     public static void main(String[] args) {
+
         //1.1
         System.out.println(getFirstIndexValue(new int[]{3, 1, 4}));
 
@@ -25,27 +26,25 @@ public class Main {
         //2.2
         System.out.println(countWords("We wish you a Merry Christmas and a Happy New Year"));
 
-
         //2.3
         System.out.println(existsHigher(new int[]{5, 3, 15, 22, 4}, 10));
 
         //2.4
         System.out.println(getVowelCount("Mississippi Massachusetts Missouri Maine"));
 
+        //2.5
         System.out.println(rev(-512));
 
-        System.out.println("01:22".split(":")[0]);
-
+        //2.6
         System.out.println(minutesToSeconds("07:59"));
 
+        //2.7
         System.out.println(differenceMaxMin(new int[]{12, 15, -1, 7, 99}));
 
+        //2.8
         System.out.println(doubleLetters("All"));
-
         System.out.println(doubleLetters("Lagoon"));
-
         System.out.println(doubleLetters("Aardvark"));
-
         System.out.println(doubleLetters("Enter"));
 
         //3.1
@@ -77,7 +76,9 @@ public class Main {
 
         //4.4
         System.out.println(hackerSpeak("Whatcha takin' bout Willis!"));
+
     }
+
 
     // 1.1
     public static int getFirstIndexValue(int[] arr) {
@@ -120,11 +121,6 @@ public class Main {
 
     }
 
-    /*
-
-    Surprisingly, this gave me problems because I had written "string input" on as opposed
-    to "String input". Still getting use to Java.
-    */
 
     // 2.1
     public static boolean reverse(boolean b) {
@@ -150,20 +146,6 @@ public class Main {
     }
 
 
-    /*
-     Another ways of tackling the problem:
-
-      int count = 1;
-      for(int i = 0; i < s.length(); i++)
-        if(Character.isWhitespace(s.charAt(i)))
-          count++;
-      return count;
-
-      public static int countWords(String s) {
-      return s.split(" ").length;
-    }
-
-   */
 
     // 2.3
     public static boolean existsHigher(int[] arr, int n) {
@@ -184,119 +166,61 @@ public class Main {
         int vowelsCount = 0;
         char index;
 
-        // Your code here
-
-        for (int i = 0; i < str.length(); i++) {
+        for (int i = 0; i < str.length(); i++){
 
             index = str.charAt(i);
 
-            if (index == 'a' || index == 'e' || index == 'i' || index == 'o'
-                    || index == 'u') {
+            switch(index) {
 
-                vowelsCount++;
+                case 'e':
+                    vowelsCount++;
+                    break;
+
+                case 'a':
+                    vowelsCount++;
+                    break;
+
+                case 'i':
+                    vowelsCount++;
+                    break;
+
+                case 'o':
+                    vowelsCount++;
+                    break;
+
+                case 'u':
+                    vowelsCount++;
+                    break;
+
+                case 'E':
+                    vowelsCount++;
+                    break;
+
+                case 'A':
+                    vowelsCount++;
+                    break;
+
+                case 'I':
+                    vowelsCount++;
+                    break;
+
+                case 'O':
+                    vowelsCount++;
+                    break;
+
+                case 'U':
+                    vowelsCount++;
+
             }
+
         }
 
         return vowelsCount;
+
     }
 
-    /*
-     This line was the bane of my existence for half an hour: index = str.charAt(i);
-     I had originally written it as index = str.charAt[i]; and couldn't figure out what was
-     wrong with my program. It was only when I copy-pasted my code from edabit to Intellij that
-     I was able to spot the error
 
-     Cannot find symbol was the relevant message for this error
-
-     I then tried to rewrite the code with a switch statement. Unfortunately I deleted a closing
-     curly brace in the process and Edabit's "Reached end of file while parsing" whispered sweet
-     nothings in my ear.
-
-     public static int getCount(String str) {
-    int vowelsCount = 0;
-		char index;
-
-    // Your code here
-
-	for (int i = 0; i < str.length(); i++){
-
-		index = str.charAt(i);
-
-		switch(index) {
-
-			case 'a':
-			case 'e':
-			case 'i':
-			case 'o':
-			case 'u':
-			case 'A':
-			case 'E':
-			case 'I':
-			case 'O':
-			case 'U':
-				vowelsCount++;
-				break;
-
-		 }
-	 }
-		return vowelsCount;
-  }
-}
-     */
-
-    /*
-
-    Revision 1 =>
-
-    Rewrote the switch statement to account for the frequency of appearance for English
-    vowels:
-
-    switch(index) {
-
-			case 'e':
-			    vowelsCount++;
-				break;
-
-			case 'a':
-			    vowelsCount++;
-				break;
-
-			case 'i':
-			    vowelsCount++;
-				break;
-
-			case 'o':
-			    vowelsCount++;
-				break;
-
-			case 'u':
-			    vowelsCount++;
-				break;
-
-			case 'E':
-			    vowelsCount++;
-				break;
-
-			case 'A':
-			    vowelsCount++;
-				break;
-
-			case 'I':
-			    vowelsCount++;
-				break;
-
-			case 'O':
-			    vowelsCount++;
-				break;
-
-			case 'U':
-				vowelsCount++;
-				break;
-
-		 }
-
-    */
-
+    //2.5
 
     public static String rev(int n) {
         String reversedNumber = "";
@@ -322,6 +246,7 @@ public class Main {
 
     }
 
+    //2.6
 
     public static int minutesToSeconds(String tm) {
 
@@ -337,6 +262,9 @@ public class Main {
         return minutes * 60 + seconds;
 
     }
+
+
+    //2.7
 
     public static int differenceMaxMin(int[] arr) {
 
@@ -362,6 +290,8 @@ public class Main {
 
     }
 
+
+    //2.8
 
     public static boolean doubleLetters(String word) {
 
@@ -395,6 +325,8 @@ public class Main {
 
     }
 
+
+
     // 3.1
     public static int sum(int a, int b) {
 
@@ -416,34 +348,18 @@ public class Main {
         }
     }
 
+
     // 3.3
     public static int calcAge(int age) {
-
-		/*
-		Use 365 days as the length of a year for this challenge.
-        Ignore leap years and days between last birthday and now.
-        Expect only positive integer inputs.
-		*/
 
         return age * 365;
 
     }
 
+
     // 3.4
     public static String helloName(String name) {
 
-		/*
-
-		Create a function that takes a name and returns a greeting in
-		the form of a string.
-
-		helloName("Gerald") ➞ "Hello Gerald!"
-
-		helloName("Tiffany") ➞ "Hello Tiffany!"
-
-		helloName("Ed") ➞ "Hello Ed!"
-
-		*/
 
         String output = "Hello " + name + "!";
 
@@ -452,15 +368,9 @@ public class Main {
 
     }
 
+
     //3.5
     public static String reverse(String str) {
-
-        /*
-         String reversed = new StringBuffer(str).reverse().toString();
-
-         return reversed;
-
-         */
 
 
         String reversed = "";
@@ -492,7 +402,6 @@ public class Main {
 
     }
 
-
     //4.1
     public static boolean makesTen(int a, int b) {
 
@@ -515,7 +424,6 @@ public class Main {
         }
         return syllables;
     }
-
 
     //4.3
     public static boolean match(String str1, String str2) {
@@ -572,7 +480,6 @@ public class Main {
         }
         return output;
     }
-
 
 }
 
