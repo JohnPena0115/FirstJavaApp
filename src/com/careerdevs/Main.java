@@ -1,5 +1,7 @@
 package com.careerdevs;
 
+import java.util.Locale;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -164,6 +166,7 @@ public class Main {
     // 2.4
     public static int getVowelCount(String str) {
         int vowelsCount = 0;
+        str = str.toLowerCase();
         char index;
 
         for (int i = 0; i < str.length(); i++){
@@ -173,46 +176,17 @@ public class Main {
             switch(index) {
 
                 case 'e':
-                    vowelsCount++;
-                    break;
+
+                case 'u':
+
+                case 'o':
+
+                case 'i':
 
                 case 'a':
                     vowelsCount++;
                     break;
-
-                case 'i':
-                    vowelsCount++;
-                    break;
-
-                case 'o':
-                    vowelsCount++;
-                    break;
-
-                case 'u':
-                    vowelsCount++;
-                    break;
-
-                case 'E':
-                    vowelsCount++;
-                    break;
-
-                case 'A':
-                    vowelsCount++;
-                    break;
-
-                case 'I':
-                    vowelsCount++;
-                    break;
-
-                case 'O':
-                    vowelsCount++;
-                    break;
-
-                case 'U':
-                    vowelsCount++;
-
             }
-
         }
 
         return vowelsCount;
